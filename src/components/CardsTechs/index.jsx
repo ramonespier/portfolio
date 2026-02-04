@@ -1,9 +1,10 @@
 import {
     Card,
-    CardContent,
     CardDescription,
     CardTitle,
 } from "@/components/ui/card"
+
+import { Badge } from "../ui/badge"
 
 export default function CardsTechs() {
     const stacks = [
@@ -35,7 +36,7 @@ export default function CardsTechs() {
 
     return (
         <>
-            <h3 className="mb-10 animate-pulse text-center font-semibold font-[jost] text-4xl tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.2] lg:text-5xl">
+            <h3 className="mb-10 animate-pulse text-center font-semibold font-[jost] text-4xl tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.2] lg:text-5xl" id="#conhecimentos">
                 Conhecimentos
             </h3>
 
@@ -44,14 +45,14 @@ export default function CardsTechs() {
                     <Card key={stack.id} className={'p-6 hover:scale-105 duration-500'}>
                         <CardTitle className={'text-center font-[jost] text-2xl'}>{stack.nome}</CardTitle>
                         <CardDescription className={'text-lg'}>{stack.conhecimento}</CardDescription>
-                        <div className="font-bold flex flex-col gap-3 py-5">
-                            <CardContent >{stack.tecnologias[0]}</CardContent>
-                            <CardContent >{stack.tecnologias[1]}</CardContent>
-                            <CardContent >{stack.tecnologias[2]}</CardContent>
-                            <CardContent >{stack.tecnologias[3]}</CardContent>
+                        <div className="flex flex-wrap gap-3 justify-center">
+                            {stack.tecnologias.map((techs, index) => (
+                                <Badge variant="secondary" key={index} className={"px-3 py-1.5 text-sm min-w-fit whitespace-nowrap"}>
+                                    {techs}
+                                </Badge>
+                            ))}
                         </div>
                     </Card>
-
                 ))}
             </div>
         </>
