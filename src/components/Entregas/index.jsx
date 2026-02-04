@@ -34,7 +34,7 @@ export default function Entregas() {
                 Serviços
             </h3>
 
-            <div className="container mx-auto w-4/5 py-12">
+            <div className="container mx-auto w-4/5 pt-12">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
                     {servicos.map((servico) => (
                         <Card key={servico.id} className="py-8 px-6 hover:scale-105 duration-500 flex flex-col justify-between h-full">
@@ -58,7 +58,6 @@ export default function Entregas() {
                                     </Badge>
                                 ))}
                             </div>
-
                         </Card>
                     ))}
                 </div>
