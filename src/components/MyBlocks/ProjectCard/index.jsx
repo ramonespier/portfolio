@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -80,7 +79,7 @@ export default function ProjectCard() {
                   </Badge>
                 ))}
               </div>
-              
+
               <AlertDialog>
                 <AlertDialogTrigger className='w-full'>
                   <Button className={'w-full'} asChild>

@@ -1,4 +1,5 @@
 import CardsTechs from "@/components/CardsTechs";
+import Certificados from "@/components/Certificados";
 import Entregas from "@/components/Entregas";
 import Hero from "@/components/MyBlocks/Hero";
 import Navbar from "@/components/navbar";
@@ -12,6 +13,7 @@ export default function Home() {
       <CardsTechs />
       <Entregas />
       <Projetos />
+      <Certificados />
     </>
   );
 }
