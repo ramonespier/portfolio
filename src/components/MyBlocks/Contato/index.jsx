@@ -41,13 +41,13 @@ export const Contato = ({id}) => {
 
   return (
     <>
-      <h3 id={id} className="m-10 mt-45 animate-pulse text-center font-semibold font-[jost] text-4xl tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.2] lg:text-5xl">
+      <h3 id={id} className=" mt-45 animate-pulse text-center font-semibold font-[jost] text-4xl tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.2] lg:text-5xl">
         Entre em Contato
       </h3>
 
       <div className="flex min-h-screen m-10 items-center justify-center py-16">
 
-        <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 xl:px-0">
+        <div className="mx-auto w-full max-w-(--breakpoint-xl)  xl:px-0">
           <h2 className="mt-3 font-semibold text-3xl tracking-tight md:text-4xl">
             Vamos trabalhar juntos?
           </h2>
