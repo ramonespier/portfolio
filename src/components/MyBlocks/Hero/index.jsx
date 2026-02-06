@@ -4,9 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BackgroundPattern } from "@/components/background-pattern";
 
-export default function Hero() {
+export default function Hero({id}) {
     return (
-        <div className="flex min-h-screen items-center justify-center px-6" id="#hero">
+        <div className="flex min-h-screen items-center justify-center px-6" id={id}>
             <BackgroundPattern />
             <div className="relative z-10 max-w-3xl text-center">
                 <Badge asChild className="rounded-full border-border text-lg text-primary" variant="ghost">

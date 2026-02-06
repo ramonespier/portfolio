@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <CardsTechs />
-      <Entregas />
-      <Projetos />
-      <Certificados />
-      <Contato />
+      <Hero id="hero"/>
+      <CardsTechs id="conhecimentos"/>
+      <Entregas id="servicos"/>
+      <Projetos id="projetos"/>
+      <Certificados id="certificados"/>
+      <Contato id="contato"/>
     </>
   );
 }

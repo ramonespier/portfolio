@@ -7,31 +7,42 @@ import { ModeToggle } from "@/Themes/theme-button";
 
 const Navbar = () => {
   return (
-    <nav
-      className="fixed inset-x-4 top-6 mx-auto h-16 max-w-(--breakpoint-xl) rounded-full border z-100 bg-background">
-      <div className="mx-auto flex h-full items-center justify-between px-4">
-        <Link href={'https://github.com/ramonespier'} target="_blank">
-          <Button className="flex gap-3 text-lg rounded-3xl cursor-pointer border " variant="link">
-            <Github />
-            ramonespier
-          </Button>
-        </Link>
-        {/* Desktop Menu */}
-        <NavMenu className="hidden md:block" />
+    <div className="p-6">
+      <nav
+        className="fixed z-50 top-6 inset-x-4 h-16 bg-background border dark:border-slate-700/70 max-w-(--breakpoint-xl) mx-auto rounded-full">
+        <div className="h-full flex items-center justify-between mx-auto px-4">
+          <Link href={'https://github.com/ramonespier'} target="_blank">
+            <Button className="flex gap-3 text-lg rounded-3xl cursor-pointer border " variant="link">
+              <Github />
+              ramonespier
+            </Button>
+          </Link>
 
-        <div className="flex items-center gap-3">
+          {/* Desktop Menu */}
+          <NavMenu className="hidden lg:block" />
 
-          <ModeToggle />
+          <div className="flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
+              <a
+                href="/curriculo_ramon.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer"
+              >
+                <Button className={'cursor-pointer'}>Baixar Currículo</Button>
+              </a>
+              <ModeToggle />
+            </div>
 
-          <Button className="rounded-full">Baixar curriculo</Button>
-
-          {/* Mobile Menu */}
-          <div className="md:hidden">
-            <NavigationSheet />
+            {/* Mobile Menu */}
+            <div className="lg:hidden">
+              <NavigationSheet />
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 

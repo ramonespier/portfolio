@@ -6,7 +6,7 @@ import {
 
 import { Badge } from "../ui/badge"
 
-export default function CardsTechs() {
+export default function CardsTechs({id}) {
     const stacks = [
         {
             id: 1,
@@ -36,7 +36,7 @@ export default function CardsTechs() {
 
     return (
         <>
-            <h3 className="mb-10 animate-pulse text-center font-semibold font-[jost] text-4xl tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.2] lg:text-5xl" id="#conhecimentos">
+            <h3 id={id} className="mb-10 animate-pulse text-center font-semibold font-[jost] text-4xl tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.2] lg:text-5xl" >
                 Conhecimentos
             </h3>
 

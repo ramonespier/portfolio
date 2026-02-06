@@ -1,6 +1,7 @@
 import { Jost, Dosis } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/Themes/themeProvider";
+import { Toaster } from "sonner";
 
 const jost = Jost({
   variable: '--font-jost',
@@ -29,6 +30,18 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              unstyled: true,
+              classNames: {
+                toast: "bg-background text-foreground border border-primary/30 shadow-xl items-center flex gap-3 rounded-xl p-4",
+                title: "font-[jost] items-center flex font-bold block",
+                description: "text-sm items-center flex text-muted-foreground"
+              }
+            }}
+          />
+
 
           <main className="relative z-40 min-h-screen">
             {children}
