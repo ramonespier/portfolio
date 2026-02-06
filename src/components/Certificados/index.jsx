@@ -57,43 +57,47 @@ export default function Certificados() {
 
   return (
     <>
-      <h3 className="m-10 mt-45 animate-pulse text-center font-semibold font-[jost] text-4xl tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.2] lg:text-5xl" id="#certificados">
+      <h3 className="mt-45 animate-pulse text-center font-semibold font-[jost] text-4xl tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.2] lg:text-5xl" id="#certificados">
         Certificados
       </h3>
 
-      <div className=" pt-12">
-        <Carousel className="w-2/4 container mx-auto" setApi={setApi}>
-          <CarouselContent>
-            {certificados.map((certificado) => (
-              <CarouselItem key={certificado.id}>
-                <p className="font-[jost] text-2xl font-semibold text-center p-5">{certificado.nome}</p>
-                <Card className={'p-0 rounded-xl'}>
-                  <CardContent className="flex aspect-video border-none items-center justify-center p-6 pb-0 relative">
-                    <Image
-                      src={certificado.foto}
-                      alt={certificado.nome}
-                      fill
-                      className="object-cover rounded-xl border-3 border-secondary"
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                    />
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-
-          <div className="text-center text-muted-foreground text-xl font-semibold p-5">
-            {certificados[current - 1] && (
-              <>
-                <p>{certificados[current - 1].local}</p>
-                <p>{certificados[current - 1].data}</p>
-              </>
-            )}
+      <div className="pt-12">
+        <div className="w-full max-w-xs mx-auto lg:max-w-md xl:max-w-lg flex flex-col lg:flex-row lg:items-end lg:gap-2">
+          <div className="w-full max-w-xs mx-auto lg:max-w-md xl:max-w-lg pt-12">
+            <Carousel className="w-full" setApi={setApi}>
+              <CarouselContent>
+                {certificados.map((certificado) => (
+                  <CarouselItem key={certificado.id} className="basis-full">
+                    <div className="h-[520px] lg:h-[580px] flex flex-col">
+                      <div className="flex-1 min-h-[120px] lg:min-h-[140px] flex items-end p-5">
+                        <p className="font-[jost] text-xl lg:text-2xl font-semibold text-center w-full line-clamp-3 lg:line-clamp-2 px-2">
+                          {certificado.nome}
+                        </p>
+                      </div>
+                      <div className="h-[60%] lg:h-[55%] relative">
+                        <Card className="p-0 rounded-xl h-full">
+                          <CardContent className="p-6 pb-0 relative h-full">
+                            <Image
+                              src={certificado.foto}
+                              alt={certificado.nome}
+                              fill
+                              className="object-cover rounded-xl border-3 border-secondary"
+                              sizes="(max-width: 1024px) 100vw, 500px"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="-ml-2 lg:-ml-4 h-12 w-12" />
+              <CarouselNext className="-mr-2 lg:-mr-4 h-12 w-12" />
+            </Carousel>
           </div>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        </div>
       </div>
+
     </>
 
   );

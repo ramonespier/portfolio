@@ -81,9 +81,9 @@ export default function ProjectCard() {
               </div>
 
               <AlertDialog>
-                <AlertDialogTrigger className='w-full'>
-                  <Button className={'w-full'} asChild>
-                    <Button>Ver mais <ArrowRight /></Button>
+                <AlertDialogTrigger className='w-full hover:scale-105 duration-250' asChild>
+                  <Button className={'w-full'}>
+                    Ver mais <ArrowRight />
                   </Button>
                 </AlertDialogTrigger>
                 <AlertDialogContent>
