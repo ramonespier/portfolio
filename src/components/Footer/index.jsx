@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Github, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 const Footer = ({
   className,
@@ -17,14 +18,19 @@ const Footer = ({
           </div>
 
           <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-8">
+
             <div className="flex font-semibold text-base cursor-pointer items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin />
-              LinkedIn
+              <Link className="flex gap-2" href="https://www.linkedin.com/in/coelhoramon/"> 
+                <Linkedin />
+                LinkedIn
+              </Link>
             </div>
-            
+
             <div className="flex text-base font-semibold cursor-pointer items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
-              <Github />
-              GitHub
+              <Link className="flex gap-2" href="https://github.com/ramonespier">
+                <Github />
+                GitHub
+              </Link>
             </div>
 
             <span className="text-muted-foreground text-base hidden cursor-default sm:inline">

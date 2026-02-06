@@ -57,7 +57,7 @@ export const Contato = ({id}) => {
           </p>
           <div className="mt-16 flex flex-col gap-16 md:gap-10 lg:flex-row">
             <div
-              className="grid w-full max-w-3xl grid-cols-1 gap-1 border bg-muted p-1 *:border *:bg-background *:p-6 sm:grid-cols-2 lg:col-span-2">
+              className="grid w-full  grid-cols-1 gap-1 border bg-muted p-1 *:border *:bg-background *:p-6 sm:grid-cols-2 lg:col-span-2">
               <div>
                 <div
                   className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:bg-foreground/10">
@@ -106,7 +106,7 @@ export const Contato = ({id}) => {
             </div>
 
             {/* Form */}
-            <div className="w-full max-w-lg border bg-muted p-1">
+            <div className="w-full border bg-muted p-1">
               <Card
                 className="relative isolate rounded-none bg-background shadow-none lg:ms-auto">
                 <CardHeader>
