@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${dosis.variable} ${jost.variable} font-[dosis] antialiased scroll-smooth`}
+        className={`${dosis.variable} ${jost.variable} font-[dosis] antialiased scroll-smooth overflow-x-hidden`}
       >
         <ThemeProvider
           attribute="class"

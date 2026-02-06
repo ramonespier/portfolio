@@ -45,7 +45,7 @@ export const Contato = ({id}) => {
         Entre em Contato
       </h3>
 
-      <div className="flex min-h-screen items-center justify-center py-16">
+      <div className="flex min-h-screen m-10 items-center justify-center py-16">
 
         <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 xl:px-0">
           <h2 className="mt-3 font-semibold text-3xl tracking-tight md:text-4xl">

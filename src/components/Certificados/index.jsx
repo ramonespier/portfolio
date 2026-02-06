@@ -61,7 +61,7 @@ export default function Certificados({id}) {
         Certificados
       </h3>
 
-      <div className="pt-12">
+      <div>
         <div className="w-full max-w-xs mx-auto lg:max-w-md xl:max-w-lg flex flex-col lg:flex-row lg:items-end lg:gap-2">
           <div className="w-full max-w-xs mx-auto lg:max-w-md xl:max-w-lg pt-12">
             <Carousel className="w-full" setApi={setApi}>
